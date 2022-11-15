@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Online Medical Healthcare</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -20,9 +20,9 @@
     <div class="card">
         <div class="card-header">
             <ul class="nav nav-pills w-100">
-                <li class="nav-link">Books</li>
+                <li class="nav-link">News</li>
                 <li class="nav-link ml-auto">
-                    <a href="/books/add" class="nav-link active">Add Book</a>
+                    <a href="/books/add" class="nav-link active">Add News</a>
                 </li>
             </ul>
         </div>
@@ -46,6 +46,8 @@
                                 <td>
                                     <a href="../books/edit/<%= data[i].id %>" class="btn btn-success edit">Edit</a>
                                     <a href="../books/delete/<%= data[i].id %>" onclick="return alert('Are you sure?')" class="btn btn-danger delete">Delete</a>
+                                    <br></br>
+                                    <a href="../books/detail/<%= data[i].id %>" class="btn btn-warning detail">Detail</a>
                                 </td>
                             </tr>
                         <% } %>
