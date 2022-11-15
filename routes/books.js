@@ -18,7 +18,8 @@ router.get('/', (req, res, next) => {
 router.get('/add', (req, res, next) => {
     res.render('books/add', {
         name: '',
-        author: ''
+        author: '',
+        detail: ''
     })
 })
 

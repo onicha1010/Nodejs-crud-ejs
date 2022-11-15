@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
+    <title>Online Medical Healthcare</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -18,7 +18,7 @@
 
     <div class="card">
         <div class="card-header">
-            Add book
+            Add News
         </div>
         <div class="card-body">
             <form action="/books/add" method="post">
@@ -29,6 +29,10 @@
                 <div class="form-group">
                     <label>Author:</label>
                     <input type="text" class="form-control" name="author" value="<%= author %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Detail:</label>
+                    <input type="text" class="form-control" name="detail" value="<%= detail %>" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <input type="submit" class="btn btn-info" value="Add">
