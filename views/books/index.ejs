@@ -17,6 +17,9 @@
         <div class="alert alert-success" role="alert"><%= messages.success %></div>
     <% } %>
 
+    <a href="/" class="btn btn-info">Back</a>
+    <br><br>
+
     <div class="card">
         <div class="card-header">
             <ul class="nav nav-pills w-100">
@@ -34,6 +37,8 @@
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">Author</th>
+                            <th scope="col">Date</th>
+                            <!-- <th scope="col">Detail</th> -->
                             <th width="200px">Action</th>
                         </tr>
                     </thead>
@@ -43,6 +48,7 @@
                                 <th scope="row"><%= data[i].id %></th>
                                 <td><%= data[i].name %></td>
                                 <td><%= data[i].author %></td>
+                                <td><%= data[i].update_at %></td>
                                 <td>
                                     <a href="../books/edit/<%= data[i].id %>" class="btn btn-success edit">Edit</a>
                                     <a href="../books/delete/<%= data[i].id %>" onclick="return alert('Are you sure?')" class="btn btn-danger delete">Delete</a>

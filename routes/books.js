@@ -18,8 +18,8 @@ router.get('/', (req, res, next) => {
 router.get('/add', (req, res, next) => {
     res.render('books/add', {
         name: '',
-        author: '',
-        detail: ''
+        author: ''
+        // detail: ''
     })
 })
 
@@ -27,16 +27,18 @@ router.get('/add', (req, res, next) => {
 router.post('/add', (req, res, next) => {
     let name = req.body.name;
     let author = req.body.author;
+    // let detail = req.body.datail;
     let errors = false;
 
     if (name.length === 0 || author.length === 0) {
         errors = true;
         // set flash message
-        req.flash('error', 'Please enter name and author');
+        req.flash('error', 'Please enter name, author and detail');
         // render to add.ejs with flash message
         res.render('books/add', {
             name: name,
             author: author
+            // detail: detail
         })
     }
 
@@ -45,6 +47,7 @@ router.post('/add', (req, res, next) => {
         let form_data = {
             name: name,
             author: author
+            // detail: detail
         }
 
         // insert query
@@ -55,6 +58,7 @@ router.post('/add', (req, res, next) => {
                 res.render('books/add', {
                     name: form_data.name,
                     author: form_data.author
+                    // detail: form_data.detail
                 })
             } else {
                 req.flash('success', 'Book successfully added');
